@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Indra Ghaniy Kusuma | QA Automation Engineer & AI Web Developer
+    </title>
+    <meta
+      name="description"
+      content="Portofolio Indra Ghaniy Kusuma, lulusan Teknik Informatika Telkom University Purwokerto (IPK 3.81), fokus pada Software QA, AI Web Development, dan Data Validation."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="bar"></div>
+    <div id="glow"></div>
+    <header class="nav">
+      <a href="#home" class="logo">IGK<span>.</span></a>
+      <nav>
+        <a href="#about">Tentang</a><a href="#skills">Skill</a
+        ><a href="#experience">Pengalaman</a> <a href="#projects">Proyek</a
+        ><a href="#education">Pendidikan</a><a href="#contact">Kontak</a>
+      </nav>
+      <button id="theme" class="btn ghost" title="Ganti tema">🌙</button>
+      <button id="toggleAdmin" class="btn ghost">✎ Kelola</button>
+    </header>
+
+    <div id="toolbar" class="toolbar">
+      <span>Mode Kelola aktif. Perubahan tersimpan di browser ini.</span>
+      <button class="btn sm" data-a="export">Export JSON</button>
+      <button class="btn sm" data-a="import">Import JSON</button>
+      <button class="btn sm danger" data-a="reset">Reset</button>
+      <input type="file" id="file" accept=".json" hidden />
+    </div>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Halo, saya</p>
+          <h1 id="nm">Indra Ghaniy Kusuma</h1>
+          <h2>Saya seorang <span id="typed"></span><i class="caret">|</i></h2>
+          <p class="lead" id="lead"></p>
+          <div class="cta">
+            <a class="btn" href="#contact">Hubungi Saya</a>
+            <a
+              class="btn ghost"
+              id="cvl"
+              href="CV_INDRA_GHANIY_KUSUMA.pdf"
+              target="_blank"
+              >Unduh CV</a
+            >
+            <button class="btn ghost add" data-a="profile">
+              ✎ Edit Profil
+            </button>
+          </div>
+        </div>
+        <div class="avatar" id="avatar">
+          <img
+            id="photo"
+            src="foto.jpg"
+            alt="Foto profil"
+            onerror="this.style.display = 'none'"
+          /><span id="ini">IGK</span><em class="chg">📷 Ganti foto</em>
+        </div>
+        <input type="file" id="pf" accept="image/*" hidden />
+      </section>
+
+      <div class="statbar">
+        <button class="btn sm add" data-a="add" data-k="stats">
+          + Tambah Statistik
+        </button>
+      </div>
+      <section class="stats" id="stats-list"></section>
+
+      <section id="about" class="sec reveal">
+        <div class="head">
+          <h3 class="title">Tentang Saya</h3>
+          <button class="btn sm add" data-a="profile">✎ Edit Profil</button>
+        </div>
+        <p id="about-t"></p>
+      </section>
+
+      <section id="skills" class="sec reveal">
+        <div class="head">
+          <h3 class="title">Keahlian Teknis</h3>
+          <button class="btn sm add" data-a="add" data-k="skills">
+            + Tambah
+          </button>
+        </div>
+        <div id="skills-list" class="grid"></div>
+      </section>
+
+      <section id="experience" class="sec reveal">
+        <div class="head">
+          <h3 class="title">Pengalaman Kerja & Magang</h3>
+          <button class="btn sm add" data-a="add" data-k="experience">
+            + Tambah
+          </button>
+        </div>
+        <div id="experience-list" class="grid one"></div>
+      </section>
+
+      <section id="projects" class="sec reveal">
+        <div class="head">
+          <h3 class="title">Proyek Unggulan</h3>
+          <button class="btn sm add" data-a="add" data-k="projects">
+            + Tambah
+          </button>
+        </div>
+        <input
+          id="q"
+          class="search"
+          placeholder="🔍 Cari proyek atau teknologi (contoh: Python)"
+        />
+        <div id="projects-list" class="grid"></div>
+      </section>
+
+      <section id="education" class="sec reveal">
+        <div class="head">
+          <h3 class="title">Pendidikan</h3>
+          <button class="btn sm add" data-a="add" data-k="education">
+            + Tambah
+          </button>
+        </div>
+        <div id="education-list" class="grid one"></div>
+      </section>
+
+      <section id="org" class="sec reveal">
+        <div class="head">
+          <h3 class="title">Organisasi & Kepemimpinan</h3>
+          <button class="btn sm add" data-a="add" data-k="org">+ Tambah</button>
+        </div>
+        <div id="org-list" class="grid"></div>
+      </section>
+
+      <section id="certs" class="sec reveal">
+        <div class="head">
+          <h3 class="title">Sertifikasi</h3>
+          <button class="btn sm add" data-a="add" data-k="certs">
+            + Tambah
+          </button>
+        </div>
+        <div id="certs-list" class="grid"></div>
+      </section>
+
+      <section id="contact" class="sec contact reveal">
+        <h3 class="title">Mari Terhubung</h3>
+        <p>
+          Terbuka untuk program magang di bidang QA, Software Testing, dan AI
+          Web Development.
+        </p>
+        <div class="cta">
+          <a class="btn" id="c-mail" href="#">indraghaniy43@gmail.com</a>
+          <a class="btn ghost" id="c-in" href="#" target="_blank" rel="noopener"
+            >LinkedIn</a
+          >
+          <a class="btn ghost" id="c-wa" href="#" target="_blank" rel="noopener"
+            >WhatsApp</a
+          >
+        </div>
+        <form id="cf" class="cform">
+          <input name="nama" placeholder="Nama Anda" required />
+          <input name="email" type="email" placeholder="Email Anda" required />
+          <textarea
+            name="pesan"
+            placeholder="Pesan untuk saya..."
+            required
+          ></textarea>
+          <button class="btn">Kirim Pesan ✉</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="yr"></span> <span id="f-nm"></span> · <span id="f-loc"></span>
+    </footer>
+
+    <button id="top" title="Ke atas">↑</button>
+    <button id="chatBtn" class="btn">💬 Tanya Saya</button>
+    <div id="chat">
+      <div class="ch-h">Asisten Portofolio <button id="chatX">✕</button></div>
+      <div id="msgs"></div>
+      <div id="qs"></div>
+    </div>
+
+    <dialog id="dlg"><form id="frm"></form></dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
