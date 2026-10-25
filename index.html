@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      Indra Ghaniy Kusuma | QA Automation Engineer & AI Web Developer
+      Indra Ghaniy Kusuma | Kandidat Magang QA & AI Web Developer
     </title>
     <meta
       name="description"
-      content="Portofolio Indra Ghaniy Kusuma, lulusan Teknik Informatika Telkom University Purwokerto (IPK 3.81), fokus pada Software QA, AI Web Development, dan Data Validation."
+      content="Portofolio Indra Ghaniy Kusuma, lulusan Teknik Informatika Universitas Telkom Purwokerto. Tertarik pada software testing dan pengembangan aplikasi berbasis AI."
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -17,17 +17,26 @@
     <div id="glow"></div>
     <header class="nav">
       <a href="#home" class="logo">IGK<span>.</span></a>
-      <nav>
+      <button
+        id="menuToggle"
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="siteNav"
+        aria-label="Buka navigasi"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="siteNav" aria-label="Navigasi utama">
         <a href="#about">Tentang</a><a href="#skills">Skill</a
         ><a href="#experience">Pengalaman</a> <a href="#projects">Proyek</a
         ><a href="#education">Pendidikan</a><a href="#contact">Kontak</a>
       </nav>
       <button id="theme" class="btn ghost" title="Ganti tema">🌙</button>
-      <button id="toggleAdmin" class="btn ghost">✎ Kelola</button>
     </header>
 
     <div id="toolbar" class="toolbar">
-      <span>Mode Kelola aktif. Perubahan tersimpan di browser ini.</span>
+      <span>Mode kelola lokal aktif. Perubahan hanya tersimpan di browser ini.</span>
       <button class="btn sm" data-a="export">Export JSON</button>
       <button class="btn sm" data-a="import">Import JSON</button>
       <button class="btn sm danger" data-a="reset">Reset</button>
@@ -48,6 +57,7 @@
               id="cvl"
               href="CV_INDRA_GHANIY_KUSUMA.pdf"
               target="_blank"
+              rel="noopener"
               >Unduh CV</a
             >
             <button class="btn ghost add" data-a="profile">
@@ -184,6 +194,13 @@
       <div id="qs"></div>
     </div>
 
+    <dialog id="imagePreview" class="image-preview">
+      <form method="dialog">
+        <button class="image-preview__close" aria-label="Tutup gambar">✕</button>
+      </form>
+      <img id="imagePreviewImg" alt="" />
+      <p id="imagePreviewCaption"></p>
+    </dialog>
     <dialog id="dlg"><form id="frm"></form></dialog>
     <script src="script.js"></script>
   </body>
